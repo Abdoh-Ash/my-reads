@@ -1,0 +1,15 @@
+{
+  "parser": "babel",
+  "printWidth": 160,
+  "tabWidth": 2,
+  "useTabs": false,
+  "singleQuote": true,
+  "bracketSpacing": false,
+  "proseWrap": "preserve",
+  "semi": true,
+  "jsxSingleQuote": false,
+  "jsxBracketSameLine": true,
+  "quoteProps": "as-needed",
+  "arrowParens": "always",
+  "trailingComma": "none"
+}

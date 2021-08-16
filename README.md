@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# My Reads
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a web app built using ReactJS as a project for an online course at Udacity.
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+Well, it is as simple as executing ```npm install``` and ```npm start``` commands through the terminal.
+Then, the app will be hosted at http://localhost:3000/
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Book State Tracking
+- Book State Management
+- Book Search
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Usage
 
-### `npm test`
+When you visit the link provided above in the *How to lunch the app?* section, you will be presented with a page that has three categories:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Currently Reading**, which displays the books marked as "Currently Reading"
+- **Want to Read**, which displays the books marked as "Want to Read"
+- **Read**, which displays the books marked as "Read"
 
-### `npm run build`
+You can change change the state of each book *i.e. the category it is placed under* by clicking on the downward facing arrowhead button at the bottom left corner of the book's thumbnail area, and changes will be reflected immediately.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+You can also search for books to add to one of the three recognized shelves by clicking on the plus button at the bottom left corner of the page, you will be redirected to http://localhost:3000/search which will show a new UI which features a search bar for you to type your queries, any changes made to the search bar will be reflected immediately below it, and results will be shown if there are any matches, and a proper message will be displayed instead if there were no matches for your query.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Books displayed in the results section can be added to any of the three categories recognized in the main page by clicking on the downward facing arrowhead button at the bottom left corner of each book's thumbnail area, and changes will be reflected immediately, books that belong to no category are categorized as None.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+With that being said, it should be also noted that in order to remove a book from the main page, the procedure would be as simple as setting its state to None.
 
-### `npm run eject`
+## Authors
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- **Abdulrahman Alkhateeb**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## License
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the GNU GPLv3 License - see the [LICENSE.md](LICENSE.md) file for details
