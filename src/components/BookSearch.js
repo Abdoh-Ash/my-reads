@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Shelf from './Shelf';
 import {debounce} from 'lodash';
 import {search} from '../api/BooksAPI';
 
-class BookSearch extends React.Component {
+class BookSearch extends Component {
   state = {
     query: '',
     results: []
@@ -14,6 +14,7 @@ class BookSearch extends React.Component {
   updateResults() {
     const books = this.props.books,
       query = this.state.query.trim();
+
     if (query) {
       search(query, 20).then((results) => {
         if (results instanceof Array) {

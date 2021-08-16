@@ -2,8 +2,9 @@ import React, {Component} from 'react';
 import {Switch, Route} from 'react-router-dom';
 import BookList from './components/BookList';
 import BookSearch from './components/BookSearch';
+import {cloneDeep} from 'lodash';
 import {getAll} from './api/BooksAPI';
-import './assets/style/App.css';
+import './assets/styles/App.css';
 
 class BooksApp extends Component {
   state = {
@@ -12,20 +13,22 @@ class BooksApp extends Component {
 
   updateBooks = (book, shelf) => {
     if (this.state.books.map((item) => item.id).includes(book.id)) {
-      this.setState((prevState) => {
-        for (let item of prevState.books) {
+      this.setState((currState) => {
+        const newState = cloneDeep(currState);
+        for (let item of newState.books) {
           if (item.id === book.id) {
             item.shelf = shelf;
             break;
           }
         }
-        return prevState;
+        return newState;
       });
     } else {
-      this.setState((prevState) => {
+      this.setState((currState) => {
+        const newState = cloneDeep(currState);
         book.shelf = shelf;
-        prevState.books.push(Object.assign({}, book));
-        return prevState;
+        newState.books.push(cloneDeep(book));
+        return newState;
       });
     }
   };
